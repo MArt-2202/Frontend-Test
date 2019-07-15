@@ -1,0 +1,231 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 7px;
+    text-align: left;
+    background: $c-1;
+    border-bottom: 1px solid $c-7;
+}
+
+.main-nav {
+    font-size: $fs-14;
+    line-height: 1;
+    
+    a{
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+.header__add {
+    display: none;
+}
+
+@media(min-width: 768px) {
+    header {
+        padding-top: 33px;
+        padding-bottom: 28px;
+        text-align: center;
+    }
+
+    .main-nav {
+        li {
+            display: inline-block;
+            margin-right: 5.75%;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 3px;
+            text-decoration: none;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                bottom: 0;
+                height: 2px;
+                background: $c-b;
+                @include trs;
+            }
+
+            &:hover {
+                color: $c-b;
+
+                &:after {
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    a.main-nav--active {
+        &:after {
+            left: 0;
+            right: 0;
+        }
+    }
+
+}
+
+@media(max-width: 767px) {
+    .main-nav {
+        display: none;
+        position: fixed;
+        top: 44px;
+        left: -100%;
+        bottom: 0;
+        z-index: 100;
+        width: 250px;
+        overflow-y: auto;
+        background: $c-3;
+        @include trs;
+
+        li {
+            border-bottom: 1px solid $c-4;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        a {
+            display: block;
+            padding: 11px 10px 9px 10px;
+            color: $c-1;
+            
+            &:hover{
+                background: $c-4;
+                color: $c-3;
+            }
+        }
+    }
+
+    .main-nav--show{
+        left: 0;
+    }
+
+    a.main-nav--active{
+        background: $c-4;
+        color: $c-3;
+    }
+
+    .header__add{
+        display: inline-block;
+        
+        .main-nav{
+            display: block;
+        }
+    }
+
+    .toggle-main-nav {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        @include trs;
+
+        i {
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 5;
+            height: 2px;
+            background: $c-3;
+            -webkit-transition: 0.4s all ease-in-out;
+            -moz-transition: 0.4s all ease-in-out;
+            transition: 0.4s all ease-in-out;
+
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                top: 9px;
+            }
+
+            &:nth-child(1) {
+                top: 0;
+            }
+
+            &:nth-child(2) {
+                width: 1px;
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+                left: 12px;
+            }
+
+            &:nth-child(3) {
+                right: 0;
+                left: 12px;
+                width: 1px;
+            }
+
+            &:nth-child(5) {
+                bottom: 0;
+            }
+        }
+    }
+
+    .toggle-main-nav--close {
+        i {
+            background: $c-9;
+
+            &:nth-child(1) {
+                top: 11px;
+                opacity: 0;
+            }
+
+            &:nth-child(2),
+            &:nth-child(3) {
+                left: -1px;
+                width: 20px;
+            }
+
+            &:nth-child(2) {
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(3) {
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+
+            &:nth-child(4) {
+                opacity: 0;
+            }
+
+            &:nth-child(5) {
+                bottom: 11px;
+                opacity: 0;
+            }
+        }
+
+        &:after {
+            opacity: 1;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,226 @@
+input,
+button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    background-color: transparent;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input,
+button,
+textarea {
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+input[type="search"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+    color: $c-5;
+    text-overflow: ellipsis;
+}
+
+::-moz-placeholder {
+    opacity: 1;
+    color: $c-5;
+    text-overflow: ellipsis;
+}
+
+:-moz-placeholder {
+    opacity: 1;
+    color: $c-5;
+    text-overflow: ellipsis;
+}
+
+-ms-input-placeholder {
+    color: $c-5;
+    text-overflow: ellipsis;
+}
+
+:focus::-webkit-input-placeholder {
+    color: transparent !important;
+}
+
+:focus::-moz-placeholder {
+    color: transparent !important;
+}
+
+:focus:-moz-placeholder {
+    color: transparent !important;
+}
+
+:focus -o-input-placeholder {
+    color: transparent !important;
+}
+
+:focus -ms-input-placeholder {
+    color: transparent !important;
+}
+
+.style-check {
+    position: relative;
+    display: table;
+    max-width: 100%;
+    padding-left: 30px;
+    color: $c-2;
+    cursor: pointer;
+    
+    >input[type="radio"],
+    >input[type="checkbox"] {
+        display: none;
+    }
+
+    >i {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 1px;
+        width: 20px;
+        height: 20px;
+        background: $c-1;
+        border: 1px solid $c-3;
+        border-radius: 2px;
+        @include trs;
+        
+        &:after{
+            content:'';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 13px;
+            height: 9px;
+            margin-left: -6.5px;
+            margin-top: -4.5px;
+            background: url(../images/sprites.png) no-repeat -40px -66px;
+            opacity: 0;
+            -webkit-transform: scale(0);
+            -moz-transform: scale(0);
+                transform: scale(0);
+            @include trs;
+        }
+    }
+
+    strong{
+        font-family: $f-1;
+        font-weight: 400;
+    }
+
+    >input[type="radio"]:checked+i,
+    >input[type="checkbox"]:checked+i {
+        background: $c-3;
+        
+        &:after{
+            opacity: 1;
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+                transform: scale(1);
+        }
+    }
+
+    &:hover{
+        > i{
+            background: $c-8;
+        }
+    }
+}
+
+.form {
+    input,
+    textarea {
+        line-height: 1;
+    }
+
+    input,
+    a,
+    button,
+    textarea,
+    .selectric-wrapper {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    input,
+    textarea,
+    .selectric-wrapper {
+        width: 100%;
+    }
+
+    input,
+    .selectric-wrapper {
+        text-align: center;
+    }
+
+    input,
+    textarea {
+        padding-left: 18px;
+        padding-right: 18px;
+        border: 1px solid $c-4;
+        border-radius: 4px;
+        background: $c-1 !important;
+        background-color: $c-1 !important;
+        
+        &:required{
+            background: $c-1 !important;
+            background-color: $c-1 !important;
+        }
+
+        &:focus {
+            border-color: $c-3;
+        }
+    }
+
+    input {
+        height: 60px;
+    }
+
+    option {
+        text-align: center;
+    }
+
+    textarea {
+        padding-top: 18px;
+        padding-bottom: 18px;
+        min-height: 180px;
+        resize: vertical;
+    }
+
+    button,
+    a {
+        width: auto;
+        max-width: 100%;
+        margin-top: -3px;
+        padding: 14px 32px;
+        font: $fs-b $f-1;
+        color: $c-1;
+        text-align: center;
+        background: $c-3;
+        border-radius: 8px;
+        cursor: pointer;
+        @include trs;
+
+        &:hover {
+            background: $c-6;
+            text-decoration: none;
+        }
+    }
+}
+
+.select-style {
+    opacity: 0;
+}
+
+.selectric-style {
+    .label {
+        color: $c-5;
+    }
+}
+

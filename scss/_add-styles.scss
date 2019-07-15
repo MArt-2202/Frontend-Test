@@ -1,0 +1,86 @@
+.hel {
+  width: 0;
+  height: 0;
+  line-height: 0 !important;
+  font-size: 0;
+  visibility: hidden;
+  opacity: 0;
+  text-indent: -9999px;
+}
+
+.has-icon{
+	position: relative;
+	display: inline-block;
+	background-image: url(../images/sprites.png);
+}
+
+.icon-1,
+.icon-2,
+.icon-3,
+.icon-4{
+	width: 47px;
+	height: 47px;
+}
+
+.icon-1{
+	background-position: -2px -3px;
+}
+
+.icon-2{
+	background-position: -52px -3px;
+}
+
+.icon-3{
+	background-position: -102px -3px;
+}
+
+.icon-4{
+	background-position: -151px -3px;
+}
+
+.style-3{
+	padding-top: 30px !important;
+}
+
+@media(min-width: 415px) {
+    .style-1{
+    	width: percentage(520/768);
+    }
+
+}
+
+@media(min-width: 340px) {
+    .style-2 {
+         width: 320px;
+    }
+
+}
+
+@media(max-width: 414px) {
+    .style-1{
+    	width: 100%;
+    }
+
+}
+
+@media(max-width: 339px) {
+    .style-2 {
+         width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+    <meta name="HandheldFriendly" content="True">
+    <title>Анкета</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="css/reject.css" media="all">
+    <![endif]-->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header>
+        <!-- CONTAINER -->
+        <div class="container">
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="#section-1" class="main-nav--active">Личная информация</a>
+                    </li>
+                    <li>
+                        <a href="#section-2">Опыт</a>
+                    </li>
+                    <li>
+                        <a href="#section-3">Javascript</a>
+                    </li>
+                    <li>
+                        <a href="#section-4">О себе</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__add">
+                <button class="toggle-main-nav">
+                    <i></i><i></i><i></i><i></i><i></i>
+                </button>
+            </div>
+        </div><!-- END CONTAINER -->
+    </header>
+    <main>
+        <!-- CONTAINER -->
+        <div class="container">
+            <section>
+                <h1>Анкета</h1>
+                <form action="/" method="POST" class="form questionnaire-form">
+                    <section id="section-1">
+                        <span class="has-icon icon-1"></span>
+                        <h2>Личная информация</h2>
+                        <div class="style-1 questionnaire-form__float-label">
+                            <input name="questionnaire-form__fio" id="questionnaire-form__fio" placeholder="ФИО" value="Мамончук Артём Анатольевич" required>
+                            <label for="questionnaire-form__fio" class="label-1">ФИО</label>
+                        </div>
+                        <div class="style-2 select-style">
+                            <select name="questionnaire-form__birthyear" id="questionnaire-form__birthyear">
+                                <option value="null">Год рождения</option>
+                                <option value="1">1998</option>
+                                <option value="2">1997</option>
+                                <option value="3">1996</option>
+                                <option value="4">1995</option>
+                                <option value="5">1994</option>
+                                <option value="6">1993</option>
+                                <option value="7">1992</option>
+                                <option value="8">1991</option>
+                                <option value="9">1990</option>
+                                <option value="10">1990</option>
+                                <option value="11">1989</option>
+                                <option value="12">1988</option>
+                                <option value="13">1987</option>
+                                <option value="14" selected>1986</option>
+                                <option value="15">1985</option>
+                                <option value="16">1984</option>
+                            </select>
+                        </div>
+                        <div class="style-1 questionnaire-form__float-label">
+                            <input name="questionnaire-form__location" id="questionnaire-form__location" placeholder="Место проживания" value="Украина, Ровно">
+                            <label for="questionnaire-form__location" class="label-1">Место проживания</label>
+                        </div>
+                        <div class="style-1 questionnaire-form__float-label">
+                            <input name="questionnaire-form__skype" id="questionnaire-form__skype" placeholder="Skype" value="mart_2202">
+                            <label for="questionnaire-form__skype" class="label-1">Skype</label>
+                        </div>
+                        <div class="style-1 questionnaire-form__float-label">
+                            <input name="questionnaire-form__telegram" id="questionnaire-form__telegram" placeholder="Telegram" value="@MArt2202">
+                            <label for="questionnaire-form__telegram" class="label-1">Telegram</label>
+                        </div>
+                        <div class="style-1 questionnaire-form__float-label">
+                            <input name="questionnaire-form__email" id="questionnaire-form__email" placeholder="E-mail" type="email" value="mamon4uk.art@yandex.ru" required>
+                            <label for="questionnaire-form__email" class="label-1">E-mail</label>
+                        </div>
+                    </section>
+                    <section id="section-2">
+                        <span class="has-icon icon-2"></span>
+                        <h2>Раскажите о своем опыте</h2>
+                        <div class="questionnaire-form__add">
+                            <div>
+                                <label class="style-check">
+                                    <input type="checkbox" name="check" value="" checked>
+                                    <i></i>
+                                    <strong>БЭМ</strong>/OOCSS
+                                </label>
+                                <label class="style-check">
+                                    <input type="checkbox" name="check" value="" checked>
+                                    <i></i>
+                                    Stylus/LESS/<strong>SASS</strong>
+                                </label>
+                                <label class="style-check">
+                                    <input type="checkbox" name="check" value="" checked>
+                                    <i></i>
+                                    Работаю с SVG
+                                </label>
+                            </div>
+                            <div>
+                                <label class="style-check">
+                                    <input type="checkbox" name="check" value="" checked>
+                                    <i></i>
+                                    Верстаю семантично
+                                </label>
+                                <label class="style-check">
+                                    <input type="checkbox" name="check" value="" checked>
+                                    <i></i>
+                                    ES2015/ES2016
+                                </label>
+                                <label class="style-check">
+                                    <input type="checkbox" name="check" value="">
+                                    <i></i>
+                                    Gulp/GRUNT
+                                </label>
+                            </div>
+                            <div>
+                                <label class="style-check">
+                                    <input type="checkbox" name="check" value="">
+                                    <i></i>
+                                    Webpack
+                                </label>
+                                <label class="style-check">
+                                    <input type="checkbox" name="check" value="" checked>
+                                    <i></i>
+                                    jQuery
+                                </label>
+                                <label class="style-check">
+                                    <input type="checkbox" name="check" value="" checked>
+                                    <i></i>
+                                    Ипользую Git
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="section-3">
+                        <span class="has-icon icon-3"></span>
+                        <h2>Уровень владения Javascript</h2>
+                        <div class="rangeslider-wrapper">
+                            <input id="rangeslider" type="hidden">
+                        </div>
+                    </section>
+                    <section id="section-4">
+                        <span class="has-icon icon-4"></span>
+                        <h2>Раскажите о себе</h2>
+                        <p>Напишите несколько предложений, чем привлекла наша вакансия<br>и что вы ожидаете от работы у нас.</p>
+                        <div class="style-1 questionnaire-form__float-label">
+                            <textarea name="questionnaire-form__message" id="questionnaire-form__message" placeholder="Понравилась тем, что..."></textarea>
+                            <label for="questionnaire-form__message" class="label-2">Понравилась тем, что...</label>
+                        </div>
+                    </section>
+                    <button type="submit" id="questionnaire-form__submit">Готово</button>
+                </form>
+            </section>
+        </div><!-- END CONTAINER -->
+    </main>
+    <span class="back-top" title="↑"></span>
+    <!-- REJECT FOR LT IE 9 -->
+    <div class="reject_wrapper">
+        <div class="reject">
+            <div>
+                <p>
+                    К сожалению, браузер, которым вы пользуетесь, морально устарел,
+                    <br>и не может нормально отображать сайт.</p>
+                <p>Пожалуйста, скачайте любой из следующих браузеров:</p>
+                <ul>
+                    <li>
+                        <a href="https://www.google.com/chrome/">Chrome</a>
+                    </li>
+                    <li>
+                        <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>
+                    </li>
+                    <li>
+                        <a href="http://www.opera.com/download">Opera</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/ie-polyfills.js"></script>
+    <script src="js/plugins.min.js"></script>
+    <script src="js/scripts-compiled.js"></script>
+</body>
+
+</html>
